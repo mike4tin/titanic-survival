@@ -15,9 +15,9 @@ import numpy as np
 import csv
 
 """Preprocessing / Setup Of Training and Validation Data"""
-train_data_path = "/Users/Mike/Desktop/TitanicSurvival/train.csv"
-val_data_path = "/Users/Mike/Desktop/TitanicSurvival/test.csv"
-result_data_path = "/Users/Mike/Desktop/TitanicSurvival/gender_submission.csv"
+train_data_path = "/Users/Mike/Desktop/titanic-survival/train.csv"
+val_data_path = "/Users/Mike/Desktop/titanic-survival/test.csv"
+result_data_path = "/Users/Mike/Desktop/titanic-survival/gender_submission.csv"
 
 val_y = pd.read_csv(result_data_path)
 val_y = val_y.Survived
@@ -87,6 +87,3 @@ with open('results.csv', 'wb') as results:
     result_writer.writeheader()
     for i in passenger_id_list:
         result_writer.writerow({'PassengerId': i, 'Survived': final_output[i-892]})
-
-
-
