@@ -70,9 +70,11 @@ for num in check_leaf_nodes:
     mae_list.append(get_mae(num, train_X, val_X, train_y, val_y))
 
 """Print Relevant Information To The Terminal"""
+print("\nGood morning Michael...")
+print("Running decision tree regressor on Titanic data now...")
 print("\nThe best mean absolute error is : " + str(min(mae_list)) + "\nand the corresponding value is : "
       + str(check_leaf_nodes[mae_list.index(min(mae_list))]))
-print("Final test set accuracy : " + str(accuracy))
+print("Final test set accuracy on Titanic predicitions : " + str(accuracy) + "\n")
 #print(final_output)
 
 """Write To CSV For Submission"""
